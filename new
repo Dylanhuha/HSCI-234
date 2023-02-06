@@ -1,0 +1,52 @@
+import js
+p5 = js.window
+
+def setup():
+    p5.createCanvas(300, 300)    # 300 x 300 pixel canvas 
+    p5.angleMode(degree)
+
+def draw():
+    p5.background(255)           # white background
+
+    s = 50
+
+    #Black
+    p5.push()
+    p5.translate(50,100)
+    #p5.rotate(p5.PI/4)
+    p5.rotate(p5.radians(45))
+    p5.fill(0)
+    p5.rect(0, 0, s ,s)
+    p5.pop()
+
+    #White
+    p5.push()
+    p5.rotate(p5.radians(-45))
+    p5.translate(50,100)
+    #p5.rotate(p5.PI/4)
+    p5.fill(255)
+    p5.rect(0, 0, s ,s)
+    p5.pop()
+
+    
+    #red
+    p5.push() # save coordinates
+    p5.translate(20,30)
+    p5.fill(255, 0, 0)
+    p5.rect(0, 0, s ,s)
+    p5.pop() #go back to previously saved coordinates
+
+    #green
+    p5.fill(0, 255 ,0)
+    p5.rect(0, 0, s, s)
+
+    #blue
+    p5.push() # save coordinates
+    p5.translate(80,30)
+    p5.fill(0, 0, 255)
+    p5.rect(0, 0, s ,s)
+    #light blue
+    p5.translate(50,50)
+    p5.fill(0, 255, 255)
+    p5.rect(0, 0, s ,s)
+    p5.pop() #go back to previously saved coordinates
