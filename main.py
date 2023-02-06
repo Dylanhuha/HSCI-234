@@ -6,7 +6,7 @@ def setup():
 
 def draw():
     p5.background(255)           # white background
-        p5.text(str(p5.mouseX) + ", " + str(p5.mouseY), 10, 20)
+    p5.text(str(p5.mouseX) + ", " + str(p5.mouseY), 10, 20)
 
     c = 150
     v = 20
@@ -20,10 +20,10 @@ def draw():
 
     p5.fill(240, 0, 0)
     p5.ellipse(c-v, 50, 30, 90)
-    p5.ellipse(c+v, 50, 30, 90)#left ear
+    p5.ellipse(c+v, 50, 30, 90)#out ear
     p5.fill(250,30,120,240)
     p5.ellipse(c-v, 65, 20, 60)
-    p5.ellipse(c+v, 65, 20, 60)#right ear
+    p5.ellipse(c+v, 65, 20, 60)#inner ear
 
     p5.fill(240, 0, 0)
     p5.ellipse(c, 100, 80, 80) #face
