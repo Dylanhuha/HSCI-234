@@ -6,7 +6,7 @@ class Sprite :
         self.x = x  
         self.y = y
 
-class Accumulate(Sprite):  # Spaceship is a child of Sprite
+class Accumulate(Sprite): 
     def __init__(self):
         self.img = p5.loadImage('accumulate.png')
         self.x = 150
@@ -23,21 +23,21 @@ class Accumulate(Sprite):  # Spaceship is a child of Sprite
 class Actions(Accumulate):
 
     def draw_bitmap(self):
-    if type(self).__name__ == 'Attack1':
-        bitmap = [
-            [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-            [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-            [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
-            [ 0, 0, 1, 1, 1, 1, 1, 1, 0, 0 ],
-            [ 0, 0, 0, 1, 1, 1, 1, 0, 0, 0 ],
-            [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
-            [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
-            [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
-            [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-            [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
-        ]
+        if type(self).__name__ == 'Attack1':
+            bitmap = [
+                [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+                [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+                [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
+                [ 0, 0, 1, 1, 1, 1, 1, 1, 0, 0 ],
+                [ 0, 0, 0, 1, 1, 1, 1, 0, 0, 0 ],
+                [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
+                [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
+                [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
+                [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+                [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+            ]
         p5.fill(230,10,10)
-    elif type(self).__name__ == 'Attack2':
+        elif type(self).__name__ == 'Attack2':
             bitmap2  = [
             [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
             [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
@@ -51,7 +51,7 @@ class Actions(Accumulate):
             [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
         ]
         p5.fill(200,20,20)
-    elif type(self).__name__ == 'Defense1':
+        elif type(self).__name__ == 'Defense1':
             bitmap3  = [
             [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
             [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
@@ -65,7 +65,7 @@ class Actions(Accumulate):
             [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         ]
         p5.fill(0,255,255)
-    elif type(self).__name__ == 'Defense2':
+        elif type(self).__name__ == 'Defense2':
             bitmap4  = [
             [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
             [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
@@ -107,19 +107,6 @@ class Actions(Accumulate):
         p5.translate(self.x, self.y)
         self.draw_bitmap(1)  
         p5.pop()
-
-    bitmap2  = [
-        [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-        [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
-        [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
-        [ 0, 1, 1, 1, 1, 1, 1, 1, 1, 0 ],
-        [ 0, 0, 1, 1, 1, 1, 1, 1, 0, 0 ],
-        [ 0, 0, 0, 1, 1, 1, 1, 0, 0, 0 ],
-        [ 0, 0, 0, 1, 1, 1, 1, 0, 0, 0 ],
-        [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
-        [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
-        [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
-    ]
 
 
 def init_Sprite():
