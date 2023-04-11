@@ -20,19 +20,68 @@ class Accumulate(Sprite):  # Spaceship is a child of Sprite
         p5.image(self.img, 0, 0)
         p5.pop()
 
-class Attack1(Accumulate):
-    bitmap1  = [
-        [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-        [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-        [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
-        [ 0, 0, 1, 1, 1, 1, 1, 1, 0, 0 ],
-        [ 0, 0, 0, 1, 1, 1, 1, 0, 0, 0 ],
-        [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
-        [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
-        [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
-        [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-        [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
-    ]
+class Actions(Accumulate):
+
+    def draw_bitmap(self):
+    if type(self).__name__ == 'Attack1':
+        bitmap = [
+            [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
+            [ 0, 0, 1, 1, 1, 1, 1, 1, 0, 0 ],
+            [ 0, 0, 0, 1, 1, 1, 1, 0, 0, 0 ],
+            [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        ]
+        p5.fill(230,10,10)
+    elif type(self).__name__ == 'Attack2':
+            bitmap2  = [
+            [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
+            [ 0, 1, 1, 1, 1, 1, 1, 1, 1, 0 ],
+            [ 0, 0, 1, 1, 1, 1, 1, 1, 0, 0 ],
+            [ 0, 0, 0, 1, 1, 1, 1, 0, 0, 0 ],
+            [ 0, 0, 0, 1, 1, 1, 1, 0, 0, 0 ],
+            [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        ]
+        p5.fill(200,20,20)
+    elif type(self).__name__ == 'Defense1':
+            bitmap3  = [
+            [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
+            [ 0, 0, 0, 1, 1, 1, 1, 0, 0, 0 ],
+            [ 0, 0, 1, 1, 1, 1, 1, 1, 0, 0 ],
+            [ 0, 0, 1, 1, 1, 1, 1, 1, 0, 0 ],
+            [ 0, 0, 0, 1, 1, 1, 1, 0, 0, 0 ],
+            [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+        ]
+        p5.fill(0,255,255)
+    elif type(self).__name__ == 'Defense2':
+            bitmap4  = [
+            [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
+            [ 0, 0, 0, 1, 1, 1, 1, 0, 0, 0 ],
+            [ 0, 0, 1, 1, 1, 1, 1, 1, 0, 0 ],
+            [ 0, 1, 1, 1, 1, 1, 1, 1, 1, 0 ],
+            [ 0, 1, 1, 1, 1, 1, 1, 1, 1, 0 ],
+            [ 0, 0, 1, 1, 1, 1, 1, 1, 0, 0 ],
+            [ 0, 0, 0, 1, 1, 1, 1, 0, 0, 0 ],
+            [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        ]
+        p5.fill(0,0,255)
+
+
+
 
     def draw_bitmap(self, n):
         p5.fill(230,10,10)
@@ -59,7 +108,6 @@ class Attack1(Accumulate):
         self.draw_bitmap(1)  
         p5.pop()
 
-class Attack2(Accumulate):
     bitmap2  = [
         [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
@@ -73,108 +121,6 @@ class Attack2(Accumulate):
         [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
     ]
 
-    def draw_bitmap(self, n):
-        p5.fill(200,20,20)
-        p5.noStroke()
-        p5.push()
-        p5.translate(-10*3, -10*3)  # center the 11x8 pixel bitmap
-        # traverse 2D lists with i and j loops:
-        for j in range(10):
-            for i in range(10):
-                if(n == 1):  # draw column j, row i of bitmap1
-                    if(self.bitmap2[j][i] == 0):
-                        p5.rect(i*6, j*6, 6, 6)
-        p5.pop()
-
-    def __init__(self, x = 150, y = 150):
-        self.x = x  
-        self.y = y
-        self.width = 70
-        self.height = 70
-
-    def draw(self):
-        p5.push()
-        p5.translate(self.x, self.y)
-        self.draw_bitmap(2)  
-        p5.pop()
-
-class Defense1(Accumulate):
-    bitmap3  = [
-        [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-        [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-        [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
-        [ 0, 0, 0, 1, 1, 1, 1, 0, 0, 0 ],
-        [ 0, 0, 1, 1, 1, 1, 1, 1, 0, 0 ],
-        [ 0, 0, 1, 1, 1, 1, 1, 1, 0, 0 ],
-        [ 0, 0, 0, 1, 1, 1, 1, 0, 0, 0 ],
-        [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
-        [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-        [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-    ]
-
-    def draw_bitmap(self, n):
-        p5.fill(0,255,255)
-        p5.noStroke()
-        p5.push()
-        p5.translate(-10*3, -10*3)  # center the 11x8 pixel bitmap
-        # traverse 2D lists with i and j loops:
-        for j in range(10):
-            for i in range(10):
-                if(n == 1):  # draw column j, row i of bitmap1
-                    if(self.bitmap3[j][i] == 0):
-                        p5.rect(i*6, j*6, 6, 6)
-        p5.pop()
-
-    def __init__(self, x = 150, y = 150):
-        self.x = x  
-        self.y = y
-        self.width = 70
-        self.height = 70
-
-    def draw(self):
-        p5.push()
-        p5.translate(self.x, self.y)
-        self.draw_bitmap(3)  
-        p5.pop()
-
-class Defense2(Accumulate):
-    bitmap4  = [
-        [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-        [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
-        [ 0, 0, 0, 1, 1, 1, 1, 0, 0, 0 ],
-        [ 0, 0, 1, 1, 1, 1, 1, 1, 0, 0 ],
-        [ 0, 1, 1, 1, 1, 1, 1, 1, 1, 0 ],
-        [ 0, 1, 1, 1, 1, 1, 1, 1, 1, 0 ],
-        [ 0, 0, 1, 1, 1, 1, 1, 1, 0, 0 ],
-        [ 0, 0, 0, 1, 1, 1, 1, 0, 0, 0 ],
-        [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 ],
-        [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
-    ]
-
-    def draw_bitmap(self, n):
-        p5.fill(0,0,255)
-        p5.noStroke()
-        p5.push()
-        p5.translate(-10*3, -10*3)  # center the 11x8 pixel bitmap
-        # traverse 2D lists with i and j loops:
-        for j in range(10):
-            for i in range(10):
-                if(n == 1):  # draw column j, row i of bitmap1
-                    if(self.bitmap4[j][i] == 0):
-                        p5.rect(i*6, j*6, 6, 6)
-        p5.pop()
-
-    def __init__(self, x = 150, y = 150):
-        self.x = x  
-        self.y = y
-        self.width = 70
-        self.height = 70
-
-    def draw(self):
-        p5.push()
-        p5.translate(self.x, self.y)
-        self.draw_bitmap(4)  
-        p5.pop()
 
 def init_Sprite():
     global sprite_list
@@ -186,20 +132,29 @@ def init_Sprite():
 
 class Player:
     Action = [
-        accumulate,
-        attack1,
-        attack2,
-        defense1,
-        defense2
-        ]
-
-
-
+        Accumulate,
+        Attack1,
+        Attack2,
+        Defense1,
+        Defense2
+    ]
 
     def __init__(self, player_id):
         self.player_id = player_id
         self.accumulation = 0
-        self.current_action = Player.Action["accumulate"]
+        self.current_action = Accumulate(x=150, y=150)  # default current action is Accumulate
+
+    def performAction(self, action_name):
+        # map the given action_name to the corresponding action index in the Action list
+        action_index = {"accumulate": 0, "attack1": 1, "attack2": 2, "defense1": 3, "defense2": 4}.get(action_name, None)
+
+        if action_index is not None:
+            # create a new instance of the chosen action and set it as the current action
+            self.current_action = Player.Action[action_index](x=150, y=150)
+            self.update_action(self.current_action)
+        else:
+            print("Invalid action name")
+
 
 
     def update_action(self, action):
@@ -239,26 +194,26 @@ def check_winner(player1, player2):
 
 def get_action_from_input():
     if (p5.keyIsPressed == True):
-        if (p5.keyCode ==='s') :
+        if (p5.keyCode =='s') :
             player1.performAction('accumulate')
-        else if (p5.keyCode == 'a') :
+        elif (p5.keyCode == 'a') :
             player1.performAction('attack1')
-        else if (p5.keyCode == 'q') :
+        elif (p5.keyCode == 'q') :
             player1.performAction('attack2')
-        else if (p5.keyCode == 'd') :
+        elif (p5.keyCode == 'd') :
             player1.performAction('defense1')
-        else if (p5.keyCode == 'e') :
+        elif (p5.keyCode == 'e') :
             player1.performAction('defense2')
             
-        if (p5.key === 'k') :
+        if (p5.key == 'k') :
             player2.performAction('accumulate')
-        else if (p5.key === 'j') :
+        elif (p5.key == 'j') :
             player2.performAction('attack1')
-        else if (p5.key === 'u') :
+        elif (p5.key == 'u') :
             player2.performAction('attack2')
-        else if (p5.key === 'l') :
+        elif (p5.key == 'l') :
             player2.performAction('defense1')
-        else if (p5.key === 'o') :
+        elif (p5.key == 'o') :
             player2.performAction('defense2')
     
 
@@ -308,13 +263,32 @@ def draw():
     p5.translate(250, 150)
     player2.current_action.draw()
     p5.pop()
-    
+
 
 def keyPressed(event):
-
-
-
-
+    global player1, player2
+    if (event.keyCode == ord('s')) :
+        player1.update_action(Player.Action["accumulate"])
+    elif (event.keyCode == ord('a')) :
+        player1.update_action(Player.Action["attack1"])
+    elif (event.keyCode == ord('q')) :
+        player1.update_action(Player.Action["attack2"])
+    elif (event.keyCode == ord('d')) :
+        player1.update_action(Player.Action["defense1"])
+    elif (event.keyCode == ord('e')) :
+        player1.update_action(Player.Action["defense2"])
+        
+    if (event.keyCode == ord('k')) :
+        player2.update_action(Player.Action["accumulate"])
+    elif (event.keyCode == ord('j')) :
+        player2.update_action(Player.Action["attack1"])
+    elif (event.keyCode == ord('u')) :
+        player2.update_action(Player.Action["attack2"])
+    elif (event.keyCode == ord('l')) :
+        player2.update_action(Player.Action["defense1"])
+    elif (event.keyCode == ord('o')) :
+        player2.update_action(Player.Action["defense2"])
+    
 
 
 
